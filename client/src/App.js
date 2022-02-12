@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import NET from "vanta/dist/vanta.net.min";
 import * as THREE from "three";
+import Video from "./streamer/Video";
 
 function App() {
   const [vantaEffect, setVantaEffect] = useState(0);
@@ -22,8 +23,8 @@ function App() {
           points: 19.0,
           maxDistance: 19.0,
           spacing: 12.0,
-          color:0x215896,
-          backgroundColor:0x7192f,
+          color: 0x215896,
+          backgroundColor: 0x7192f,
         })
       );
     }
@@ -38,7 +39,9 @@ function App() {
         ref={vantaRef}
       >
         <h1 className="heading">Finguitar</h1>
-        <div className="cam"></div>
+        <div className="cam">
+          <Video></Video>
+        </div>
       </div>
     </div>
   );
