@@ -21,6 +21,9 @@ const Video = () => {
         ws.send(capture());
       }, 1000 / FPS);
     };
+    ws.onmessage = (msg) => {
+      console.log(msg.data);
+    };
   }, []);
 
   return (

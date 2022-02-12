@@ -23,7 +23,6 @@ hands = mp_hands.Hands(
 )
 
 
-
 @app.route("/keypoint_classifier/")
 def hello_world():
     # get image by converting from base64
@@ -34,23 +33,29 @@ def hello_world():
     results = hands.process(image)
     image.flags.writeable = True
     if results.multi_hand_landmarks is not None:
-            for hand_landmarks, handedness in zip(results.multi_hand_landmarks, results.multi_handedness):
-                # Landmark calculation
-                landmark_list = calc_landmark_list(image, hand_landmarks)
-                # Conversion to relative coordinates / normalized coordinates
-                pre_processed_landmark_list = pre_process_landmark(
-                    landmark_list)
-                # Hand sign classification
-                hand_sign_id = keypoint_classifier(pre_processed_landmark_list)
+        for hand_landmarks, handedness in zip(results.multi_hand_landmarks, results.multi_handedness):
+            # Landmark calculation
+            landmark_list = calc_landmark_list(image, hand_landmarks)
+            # Conversion to relative coordinates / normalized coordinates
+            pre_processed_landmark_list = pre_process_landmark(
+                landmark_list)
+            # Hand sign classification
+            hand_sign_id = keypoint_classifier(pre_processed_landmark_list)
 
     return jsonify(hand_sign_id)
+
 
 @sock.route('/')
 def echo(ws):
     while True:
         data = ws.receive()
-        ws.send(base64.decodebytes(data))
+        data_bytes = base64.b64decode(data)
+        # result = data_bytes.decode('windows-1252')
+        # print(result)
+        # print(type(data_bytes))
+        ws.send(data)
 
-if __name__=="__main__":
-    #socketio.run(app)
-    app.run(debug=True,port = 3100)
+
+if __name__ == "__main__":
+    # socketio.run(app)
+    app.run(debug=True, port=3001)
