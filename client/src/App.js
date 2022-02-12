@@ -1,4 +1,4 @@
-import { SketchComp } from "./sketch/SketchComp";
+import { SketchComp2 } from "./sketch/SketchComp2";
 import "./App.css";
 import Video from "./streamer/Video";
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <SketchComp></SketchComp>
+      <SketchComp2></SketchComp2>
       <h1 className="heading">Finguitar</h1>
       <div className="cam">{/* <Video></Video> */}</div>
     </div>

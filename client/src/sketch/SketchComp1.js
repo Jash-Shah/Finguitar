@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 
-export const SketchComp = () => {
+export const SketchComp1 = () => {
   function sketch(p5) {
     class Particle {
       constructor(x, y, hu, firework) {
@@ -160,9 +160,9 @@ export const SketchComp = () => {
 
     p5.draw = () => {
       p5.background(0);
-    //   p5.clear();
+      //   p5.clear();
 
-      if (p5.random(1) < 0.15) {
+      if (p5.random(1) < 0.1) {
         fireworks.push(new Firework());
       }
 
