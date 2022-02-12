@@ -70,7 +70,7 @@ def echo(ws):
             img_result_np = np.frombuffer(data_bytes, np.uint8)
             img_result_cv = cv.imdecode(img_result_np, cv.IMREAD_COLOR)
             res = get_sign(img_result_cv)
-            print("Sign = ",res)
+            # print("Sign = ",res)
         ws.send(res)
 
 

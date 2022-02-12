@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <SketchComp2></SketchComp2>
       <h1 className="heading">Finguitar</h1>
-      <div className="cam">{/* <Video></Video> */}</div>
+      <div className="cam"><Video></Video></div>
     </div>
   );
 }

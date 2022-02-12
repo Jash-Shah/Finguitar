@@ -14,6 +14,7 @@
     "react-webcam": "^6.0.1",
     "socket.io-client": "^4.4.1",
     "three": "^0.137.5",
+    "use-sound": "^4.0.1",
     "vanta": "^0.5.21",
     "web-vitals": "^2.1.4"
   },
