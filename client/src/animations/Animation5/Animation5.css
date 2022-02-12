@@ -1,0 +1,32 @@
+.background-change {
+    font: 22px Arial;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    color: white;
+    background: red;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, salmon 50%, lightblue 50%) right;
+    background-size: 200%;
+    transition: 1s ease-out;
+    animation:background-color 1s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes background-color{
+    0%{
+        background-position:right;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+100%{
+    background-position: left;
+    opacity: 0;
+}
+}

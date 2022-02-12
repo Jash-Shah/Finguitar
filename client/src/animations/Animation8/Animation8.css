@@ -1,0 +1,29 @@
+.square {
+  height: 100vh;
+}
+
+.circle {
+  display: block;
+  content: "";
+  width: 50vmin;
+  height: 50vmin;
+  margin: calc(50vh - 25vmin);
+  background: gray;
+  -webkit-animation: move 1s linear;
+  animation: move 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move {
+  100% {
+    transform: translateX(calc(100vw - calc(50vmin + 50vh)));
+    opacity: 0;
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(calc(100vw - calc(50vmin + 50vh)));
+    opacity: 0;
+  }
+}

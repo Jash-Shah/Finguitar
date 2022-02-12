@@ -1,0 +1,43 @@
+.container {
+    position: absolute;
+    inset: 0;
+    background: #0ecabb;
+    overflow: hidden;
+  }
+  .container .leaf {
+    height: 90%;
+    width: 90%;
+    opacity: 0;
+    transform-origin: 50% 100%;
+    background: #fefefe;
+    border-radius: 100px;
+    animation-name: swing;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  .container .leaf.parent {
+    height: 50px;
+    width: 20px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 80%;
+    position: absolute;
+  }
+  @keyframes swing {
+      0%{
+          opacity: 0;
+      }
+    25% {
+      transform: translateY(-90%) rotate(-50deg);
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(-90%) rotate(50deg);
+      opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+  
