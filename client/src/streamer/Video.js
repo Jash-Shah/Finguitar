@@ -12,7 +12,6 @@ import tune6 from "../tunes/tune6.wav";
 import tune7 from "../tunes/tune7.wav";
 import tune8 from "../tunes/tune8.wav";
 import tune9 from "../tunes/tune9.wav";
-import tune10 from "../tunes/tune10.wav";
 
 import music1 from "../music/music1.mp3";
 import music2 from "../music/music2.mp3";

@@ -21,3 +21,5 @@ The interesting piece is the getUserMedia function. This function allows you to 
 1. If the user does not grant permission to access the webcam or your webcam runs into some other kind of error, specify a error function to handle the error conditions.
 
 For what we are trying to do, we call the getUserMedia function and tell it to only retrieve the video from the webcam. Once we retrieve the video, we tell our success function to send the video data to our video element for display on our screen.
+
+![Websocket connection, its difference with XHR](https://www.xoriant.com/sites/default/files/uploads/2015/02/img4-webS.png)
