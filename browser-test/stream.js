@@ -16,3 +16,22 @@ if (navigator.mediaDevices.getUserMedia) {
       statusText.classList.add("failure");
     });
 }
+
+const getFrame = () => {
+  const canvas = document.createElement("canvas");
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext("2d").drawImage(video, 0, 0);
+  const data = canvas.toDataURL("image/png");
+  return data;
+};
+
+const WS_URL = "ws://localhost:3001";
+const FPS = 3;
+const ws = new WebSocket(WS_URL);
+ws.onopen = () => {
+  console.log(`Connected to ${WS_URL}`);
+  setInterval(() => {
+    ws.send(getFrame());
+  }, 1000 / FPS);
+};
