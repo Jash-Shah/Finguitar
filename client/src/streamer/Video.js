@@ -1,8 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import Webcam from "react-webcam";
+import useSound from "use-sound";
+import GestureContext from "../context/GestureContext";
+import tune1 from "../tunes/tune1.wav";
+import music1 from "../music/music1.mp3";
+import music2 from "../music/music2.mp3";
 
 const Video = () => {
   const webcamRef = useRef(null);
+  const { gestureIndex, setGestureIndex } = useContext(GestureContext);
+
+  const [playMusic1] = useSound(music1, { volume: 0.5 });
 
   //   const getFrame = () => {};
   const capture = () => {
@@ -22,9 +30,12 @@ const Video = () => {
       }, 1000 / FPS);
     };
     ws.onmessage = (msg) => {
-      console.log(msg.data);
+      let rec = Number(msg.data);
+      console.log(rec, msg.data);
     };
   }, []);
+
+  playMusic1();
 
   return (
     <>
