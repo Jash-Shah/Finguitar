@@ -8,7 +8,7 @@
 
 <div align="center">
    <strong>Finguitar</strong> - This is an online instrument which you can play using just your fingers. <br>
-  CodeOdyssey Hack-a-thon
+  CodeOdyssey Hack-a-thon || Team NeoStar Aaghadi
 </div>
 <hr>
 
@@ -60,3 +60,9 @@ The communication is carried out on a <strong>WebSocket</strong> endpoint run by
 - Improve the animations on the web-app
 - Add a gamified experience for the user, and provide him with a score as a feedback
 - Add a tutorial run, where the user can first train on the set of gestures and get familiar with the sounds.
+
+## 👨‍💻Team Members:
+- [Sarvagnya Purohit](https://github.com/saRvaGnyA)
+- [Jash Shah](https://github.com/Jash-Shah)
+- [Pratiksha Sankhe](https://github.com/psankhe28)
+- [Alisha Kamat](https://github.com/alisha-kamat)
