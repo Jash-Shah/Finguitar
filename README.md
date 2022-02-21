@@ -8,7 +8,7 @@
 
 <div align="center">
    <strong>Finguitar</strong> - This is an online instrument which you can play using just your fingers. <br>
-  CodeOdyssey Hack-a-thon || Team NeoStar Aaghadi <br> <br>
+  CodeOdyssey Hack-a-thon Winners || Team NeoStar Aaghadi <br> <br>
   <img src="https://img.shields.io/github/stars/Jash-Shah/Finguitar?color=green&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/Jash-Shah/Finguitar?color=red&style=for-the-badge">
 </div>
